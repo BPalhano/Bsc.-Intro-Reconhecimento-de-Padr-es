@@ -50,7 +50,7 @@ class Quadratic_classifier:
     def mean_centroid(self, n_ind, n_exp, size):
         
         centroid = np.zeros((size, n_ind))
-        for feat in range(n_ind): # Centroide pela média
+        for feat in range(n_ind): # Centroide pela mediana
             median_centroid = np.median(self._data[n_exp*feat:n_exp*feat + (n_exp-1),:], axis=0)
             centroid[:,feat] = median_centroid[0:size]
         return centroid
